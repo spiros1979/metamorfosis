@@ -1,0 +1,73 @@
+const markerRoot = document.getElementById("marker-root");
+const statusEl = document.getElementById("status");
+const lensTextEl = document.getElementById("lensText");
+
+const quoteEl = document.getElementById("quote");
+const layerMain = document.getElementById("layer-main");
+const layerOverlay = document.getElementById("layer-overlay");
+const hotspot = document.getElementById("hotspot");
+
+const toggleQuoteBtn = document.getElementById("toggleQuote");
+const toggleLayerBtn = document.getElementById("toggleLayer");
+const cycleLensBtn = document.getElementById("cycleLens");
+
+let quoteVisible = false;
+let layersVisible = true;
+
+const lenses = [
+  {
+    key: "Χώρος",
+    text: "Εστίαση στον χώρο: το δωμάτιο ως σύμβολο εγκλωβισμού.",
+    hotspot: "Hotspot: Ο χώρος δείχνει κοινωνική απομόνωση και σταδιακή αποανθρωποποίηση.",
+  },
+  {
+    key: "Οικογένεια",
+    text: "Εστίαση στην οικογένεια: από φροντίδα σε απόρριψη.",
+    hotspot: "Hotspot: Η αλλαγή στάσης της οικογένειας αποκαλύπτει όρια της ενσυναίσθησης.",
+  },
+  {
+    key: "Σώμα",
+    text: "Εστίαση στο σώμα: το σώμα ως πεδίο ταυτότητας και ντροπής.",
+    hotspot: "Hotspot: Η μεταμόρφωση λειτουργεί ως οπτική αλληγορία του κοινωνικού αποκλεισμού.",
+  },
+];
+
+let lensIndex = 0;
+
+function applyLens() {
+  const activeLens = lenses[lensIndex];
+  cycleLensBtn.textContent = `Λογοτεχνικός Φακός: ${activeLens.key}`;
+  lensTextEl.textContent = activeLens.text;
+}
+
+markerRoot.addEventListener("targetFound", () => {
+  statusEl.textContent = "Marker εντοπίστηκε. Πάτησε hotspot ή επίλεξε διαφορετικό φακό ανάγνωσης.";
+});
+
+markerRoot.addEventListener("targetLost", () => {
+  statusEl.textContent = "Χάθηκε ο marker. Στόχευσε ξανά για να συνεχίσεις.";
+});
+
+toggleQuoteBtn.addEventListener("click", () => {
+  quoteVisible = !quoteVisible;
+  quoteEl.setAttribute("visible", quoteVisible);
+  toggleQuoteBtn.textContent = quoteVisible ? "Απόκρυψη Αποσπάσματος" : "Εμφάνιση Αποσπάσματος";
+});
+
+toggleLayerBtn.addEventListener("click", () => {
+  layersVisible = !layersVisible;
+  layerMain.setAttribute("visible", layersVisible);
+  layerOverlay.setAttribute("visible", layersVisible);
+  toggleLayerBtn.textContent = layersVisible ? "Απόκρυψη Εικόνων" : "Εμφάνιση Εικόνων";
+});
+
+cycleLensBtn.addEventListener("click", () => {
+  lensIndex = (lensIndex + 1) % lenses.length;
+  applyLens();
+});
+
+hotspot.addEventListener("click", () => {
+  statusEl.textContent = lenses[lensIndex].hotspot;
+});
+
+applyLens();

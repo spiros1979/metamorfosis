@@ -1,0 +1,92 @@
+:root {
+  --paper: #f6f1e6;
+  --ink: #1f1c18;
+  --accent: #9f2f22;
+  --link: #124b86;
+  --panel: rgba(246, 241, 230, 0.92);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #d3e2ef, #f3e5ce 68%);
+}
+
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 0.9rem;
+  background: var(--panel);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.hud h1 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.hud p {
+  margin: 0.35rem 0 0;
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.marker-note {
+  font-size: 0.85rem;
+}
+
+.marker-note a {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.lens-text {
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .hud h1 {
+    font-size: 0.98rem;
+  }
+
+  .hud p,
+  .lens-text {
+    font-size: 0.84rem;
+  }
+
+  button {
+    font-size: 0.82rem;
+    padding: 0.46rem 0.7rem;
+  }
+}
