@@ -11,7 +11,7 @@ const toggleQuoteBtn = document.getElementById("toggleQuote");
 const toggleLayerBtn = document.getElementById("toggleLayer");
 const cycleLensBtn = document.getElementById("cycleLens");
 
-let quoteVisible = false;
+let quoteVisible = true;
 let layersVisible = true;
 
 const lenses = [
@@ -49,6 +49,9 @@ function applyLens() {
 }
 
 markerRoot.addEventListener("targetFound", () => {
+  quoteVisible = true;
+  quoteEl.setAttribute("visible", true);
+  toggleQuoteBtn.textContent = "Απόκρυψη Αποσπάσματος";
   statusEl.textContent = "Marker εντοπίστηκε. Πάτησε hotspot ή επίλεξε διαφορετικό φακό ανάγνωσης.";
 });
 
