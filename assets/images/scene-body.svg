@@ -1,0 +1,24 @@
+<svg width="720" height="540" viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.72">
+      <stop offset="0" stop-color="#5b4635"/>
+      <stop offset="1" stop-color="#17161b"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="540" fill="url(#bg)"/>
+  <ellipse cx="360" cy="268" rx="132" ry="170" fill="#42271e" stroke="#d8b890" stroke-width="14"/>
+  <ellipse cx="360" cy="250" rx="88" ry="114" fill="#6b3a2b" opacity="0.82"/>
+  <line x1="278" y1="180" x2="184" y2="122" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="268" y1="242" x2="150" y2="220" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="268" y1="304" x2="148" y2="334" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="278" y1="364" x2="186" y2="424" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="442" y1="180" x2="536" y2="122" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="452" y1="242" x2="570" y2="220" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="452" y1="304" x2="572" y2="334" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <line x1="442" y1="364" x2="534" y2="424" stroke="#d8b890" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="334" cy="232" r="10" fill="#f2e4c7"/>
+  <circle cx="386" cy="232" r="10" fill="#f2e4c7"/>
+  <path d="M320 304 C342 322, 378 322, 400 304" stroke="#f2e4c7" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="58" y="472" font-size="42" fill="#f6e7ce" font-family="Georgia">Σώμα</text>
+  <text x="58" y="512" font-size="24" fill="#e2d0b3" font-family="Georgia">Η μεταμόρφωση ως κρίση ταυτότητας και ορατότητας</text>
+</svg>

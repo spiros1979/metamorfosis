@@ -38,7 +38,9 @@
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <img id="collage-main" src="assets/images/collage-main.svg" alt="AR collage" />
+        <img id="scene-room" src="assets/images/scene-room.svg" alt="AR room scene" />
+        <img id="scene-family" src="assets/images/scene-family.svg" alt="AR family scene" />
+        <img id="scene-body" src="assets/images/scene-body.svg" alt="AR body scene" />
         <img id="collage-overlay" src="assets/images/collage-overlay.svg" alt="overlay" />
       </a-assets>
 
@@ -47,7 +49,7 @@
       <a-entity id="marker-root" mindar-image-target="targetIndex: 0">
         <a-plane
           id="layer-main"
-          src="#collage-main"
+          src="#scene-room"
           position="0 0 0"
           height="1"
           width="1.3"

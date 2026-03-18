@@ -19,16 +19,19 @@ const lenses = [
     key: "Χώρος",
     text: "Εστίαση στον χώρο: το δωμάτιο ως σύμβολο εγκλωβισμού.",
     hotspot: "Hotspot: Ο χώρος δείχνει κοινωνική απομόνωση και σταδιακή αποανθρωποποίηση.",
+    image: "#scene-room",
   },
   {
     key: "Οικογένεια",
     text: "Εστίαση στην οικογένεια: από φροντίδα σε απόρριψη.",
     hotspot: "Hotspot: Η αλλαγή στάσης της οικογένειας αποκαλύπτει όρια της ενσυναίσθησης.",
+    image: "#scene-family",
   },
   {
     key: "Σώμα",
     text: "Εστίαση στο σώμα: το σώμα ως πεδίο ταυτότητας και ντροπής.",
     hotspot: "Hotspot: Η μεταμόρφωση λειτουργεί ως οπτική αλληγορία του κοινωνικού αποκλεισμού.",
+    image: "#scene-body",
   },
 ];
 
@@ -38,6 +41,7 @@ function applyLens() {
   const activeLens = lenses[lensIndex];
   cycleLensBtn.textContent = `Λογοτεχνικός Φακός: ${activeLens.key}`;
   lensTextEl.textContent = activeLens.text;
+  layerMain.setAttribute("src", activeLens.image);
 }
 
 markerRoot.addEventListener("targetFound", () => {

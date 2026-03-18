@@ -1,6 +1,8 @@
 <svg width="720" height="540" viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="40" width="640" height="460" fill="none" stroke="#f4f0e6" stroke-width="10"/>
-  <path d="M90 430 C190 300, 330 520, 620 160" stroke="#f7b538" stroke-width="8" fill="none"/>
-  <text x="112" y="110" font-size="34" fill="#f4f0e6" font-family="Georgia">Μεταμόρφωση</text>
-  <text x="130" y="465" font-size="20" fill="#f4f0e6" font-family="Georgia">Συν-ανάγνωση: εικόνα + κείμενο</text>
+  <rect x="34" y="34" width="652" height="472" fill="none" stroke="#f4f0e6" stroke-width="10"/>
+  <path d="M96 420 C200 306, 314 498, 622 158" stroke="#f7b538" stroke-width="8" fill="none"/>
+  <circle cx="592" cy="132" r="22" fill="#f7b538"/>
+  <circle cx="592" cy="132" r="8" fill="#452d11"/>
+  <text x="104" y="112" font-size="34" fill="#f4f0e6" font-family="Georgia">Μεταμόρφωση</text>
+  <text x="110" y="454" font-size="22" fill="#f4f0e6" font-family="Georgia">Δείγματα εικόνων για AR συν-ανάγνωση</text>
 </svg>
