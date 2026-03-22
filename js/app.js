@@ -1,8 +1,8 @@
 const markerRoot = document.getElementById("marker-root");
 const statusEl = document.getElementById("status");
 const lensTextEl = document.getElementById("lensText");
+const quotePanelEl = document.getElementById("quotePanel");
 
-const quoteEl = document.getElementById("quote");
 const layerMain = document.getElementById("layer-main");
 const layerOverlay = document.getElementById("layer-overlay");
 const hotspot = document.getElementById("hotspot");
@@ -45,12 +45,12 @@ function applyLens() {
   cycleLensBtn.textContent = `Λογοτεχνικός Φακός: ${activeLens.key}`;
   lensTextEl.textContent = activeLens.text;
   layerMain.setAttribute("src", activeLens.image);
-  quoteEl.setAttribute("value", activeLens.quote);
+  quotePanelEl.textContent = activeLens.quote;
 }
 
 markerRoot.addEventListener("targetFound", () => {
   quoteVisible = true;
-  quoteEl.setAttribute("visible", true);
+  quotePanelEl.hidden = false;
   toggleQuoteBtn.textContent = "Απόκρυψη Αποσπάσματος";
   statusEl.textContent = "Marker εντοπίστηκε. Πάτησε hotspot ή επίλεξε διαφορετικό φακό ανάγνωσης.";
 });
@@ -61,7 +61,7 @@ markerRoot.addEventListener("targetLost", () => {
 
 toggleQuoteBtn.addEventListener("click", () => {
   quoteVisible = !quoteVisible;
-  quoteEl.setAttribute("visible", quoteVisible);
+  quotePanelEl.hidden = !quoteVisible;
   toggleQuoteBtn.textContent = quoteVisible ? "Απόκρυψη Αποσπάσματος" : "Εμφάνιση Αποσπάσματος";
 });
 

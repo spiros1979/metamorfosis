@@ -15,12 +15,7 @@
       <p id="status">Στόχευσε την κάμερα στο marker για να εμφανιστεί το AR κολάζ.</p>
       <p class="marker-note">
         Marker (demo):
-        <a
-          href="https://raw.githubusercontent.com/hiukim/mind-ar-js/master/examples/image-tracking/assets/card-example/card.png"
-          target="_blank"
-          rel="noreferrer"
-          >open marker</a
-        >
+        <a href="marker.html" target="_blank" rel="noreferrer">open marker</a>
       </p>
       <div class="controls">
         <button id="toggleQuote" type="button">Απόκρυψη Αποσπάσματος</button>
@@ -28,6 +23,7 @@
         <button id="cycleLens" type="button">Λογοτεχνικός Φακός: Χώρος</button>
       </div>
       <p id="lensText" class="lens-text">Εστίαση στον χώρο: το δωμάτιο ως σύμβολο εγκλωβισμού.</p>
+      <p id="quotePanel" class="quote-panel">Το δωμάτιο γίνεται όριο, καταφύγιο και φυλακή μαζί.</p>
     </div>
 
     <a-scene
@@ -64,17 +60,6 @@
           width="1.1"
           material="transparent: true"
         ></a-plane>
-
-        <a-text
-          id="quote"
-          value="Ο Γκρέγκορ ξύπνησε και βρέθηκε μεταμορφωμένος..."
-          color="#f4f0e6"
-          position="0 -0.58 0.02"
-          width="1.6"
-          align="center"
-          wrap-count="34"
-          visible="true"
-        ></a-text>
 
         <a-sphere
           id="hotspot"
